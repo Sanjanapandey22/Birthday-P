@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Hide the text and button
                 welcomeText.style.display = "none";
 
+                let boxText = document.createElement("div");
+                boxText.classList.add("box-text");
+                boxText.innerHTML = "Kholo kholo click kro box pr 🤭😁";
+                animationContainer.appendChild(boxText);
+                boxText.style.display = "block";
+
                 // Create the Box Animation
                 let boxAnimation = document.createElement("dotlottie-player");
                 boxAnimation.setAttribute("src", "https://lottie.host/06b14361-08d2-4955-a190-e2195bc7d0cf/TspRbQTsVK.lottie");
@@ -24,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 boxAnimation.addEventListener("click", function () {
                     // Remove the box
                     boxAnimation.remove();
+                    boxText.style.display = "none";
 
                     // Play the Birthday Song
                     birthdaySong.play();
@@ -31,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Create Happy Birthday Text
                     let birthdayText = document.createElement("div");
                     birthdayText.classList.add("birthday-text");
-                    birthdayText.innerHTML = "❤️ HAPPYYYY BIRTHDAYY CUTUU ❤️😊";
+                    birthdayText.innerHTML = "❤️ HAPPYYYY BIRTHDAYY PRASHUU ❤️😊";
                     animationContainer.appendChild(birthdayText);
                     birthdayText.style.display = "block";
 
@@ -72,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (Date.now() < end) {
                         requestAnimationFrame(frame);
                     }
+                   
                 })();
             }
         });
