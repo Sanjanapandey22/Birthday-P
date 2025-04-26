@@ -1,3 +1,2 @@
 # Birthday-P
-A surprise for my cutu ❤️
-click here to view - 
+A birthday suprise card project.
